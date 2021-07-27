@@ -1,6 +1,5 @@
 import styles from './component.module.css'
 import React, { useState, useCallback } from 'react';
-import { NoEmitOnErrorsPlugin } from 'webpack';
 
 const loginForm = () => {
     const [id, setId] = useState("");
@@ -34,8 +33,8 @@ const loginForm = () => {
                 <button name="daumBtn" className={styles.idInput5} onClick={onChange}>다음 계정 로그인</button>
                 <div className={styles.line}></div>
                 <div className={styles.ltr}>
-                    <a href={path + "/signUp"}><p name="signUp" className={styles.signUp} onClick={onChange}>회원가입</p></a>
-                    <a href={path}><p name="searchPassword" className={styles.searchPassword} onClick={onChange}>비밀번호 찾기</p></a>
+                    <a href={path + "/signUp"} className={styles.noUnderLine}><p name="signUp" className={styles.signUp} onClick={onChange}>회원가입</p></a>
+                    <a href={path} className={styles.noUnderLine}><p name="searchPassword" className={styles.searchPassword} onClick={onChange}>비밀번호 찾기</p></a>
                 </div>
             </div>
         </div>
